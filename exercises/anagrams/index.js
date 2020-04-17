@@ -8,7 +8,7 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-// alternatively, can sort and compare, but interviewers tend not to like it!
+// alternatively we can sort and compare, but interviewers tend not to like it!
 function anagrams(stringA, stringB) {
     const strA = transformStr(stringA);
     const strB = transformStr(stringB);
