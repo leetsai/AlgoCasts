@@ -27,14 +27,16 @@ function matrix(n) {
         results.push([]);
     }
 
-    while (startCol <= endCol && startRow <= endRow) {
+    while (startRow <= endRow && startCol <= endCol) {
+        // top==================
         for (let i = startCol; i <= endCol; i++) {
             results[startRow][i] = counter;
-            counter++;
+            counter++
         }
 
         startRow++;
 
+        // right==================
         for (let i = startRow; i <= endRow; i++) {
             results[i][endCol] = counter;
             counter++;
@@ -42,13 +44,15 @@ function matrix(n) {
 
         endCol--;
 
+        // bottom==================
         for (let i = endCol; i >= startCol; i--) {
             results[endRow][i] = counter;
             counter++;
         }
-
+        
         endRow--;
-
+        
+        // left==================
         for (let i = endRow; i >= startRow; i--) {
             results[i][startCol] = counter;
             counter++;
